@@ -7,9 +7,10 @@ export default function HeroSection() {
       <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-pink-100 blur-3xl opacity-60 pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 rounded-full bg-pink-50 blur-3xl opacity-80 pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 md:gap-8 items-center">
-        {/* Copy */}
-        <div className="flex flex-col gap-6 text-center md:text-left order-2 md:order-1">
+      <div className="relative z-10 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+
+        {/* 1 — Badge + Headline (always first) */}
+        <div className="flex flex-col gap-4 text-center md:text-left order-1 md:col-start-1 md:row-start-1">
           {/* Badge */}
           <div className="animate-fade-up inline-flex items-center self-center md:self-start gap-2 glass-pink rounded-full px-4 py-1.5 text-xs font-semibold text-pink-600 uppercase tracking-widest">
             <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
@@ -24,7 +25,15 @@ export default function HeroSection() {
             </span>{" "}
             de tu perro está aquí.
           </h1>
+        </div>
 
+        {/* 2 — GlucoseDisplay (second on mobile, right col on desktop spanning both rows) */}
+        <div className="flex justify-center items-center order-2 md:col-start-2 md:row-start-1 md:row-span-2 animate-fade-up delay-200">
+          <GlucoseDisplay />
+        </div>
+
+        {/* 3 — Sub + stats + CTAs (third on mobile, continues left col on desktop) */}
+        <div className="flex flex-col gap-6 text-center md:text-left order-3 md:col-start-1 md:row-start-2">
           {/* Sub */}
           <p className="animate-fade-up delay-200 text-base md:text-lg text-gray-500 leading-relaxed max-w-md mx-auto md:mx-0">
             VQPET H es el primer glucómetro calibrado específicamente para mascotas. Resultados en{" "}
@@ -69,11 +78,6 @@ export default function HeroSection() {
               Cómo funciona
             </a>
           </div>
-        </div>
-
-        {/* Product visual */}
-        <div className="flex justify-center items-center order-1 md:order-2 animate-fade-up delay-200">
-          <GlucoseDisplay />
         </div>
       </div>
 
