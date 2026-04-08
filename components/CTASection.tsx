@@ -162,7 +162,11 @@ export default function CTASection() {
 
             {/* Secondary */}
             <a
-              href="https://wa.me/5491100000000?text=Hola!%20Quiero%20info%20sobre%20VQPET%20Glucómetro"
+              href={
+                tab === "mayorista"
+                  ? "https://wa.me/5491100000000?text=Hola%20soy%20Mayorista%2FClinica%20y%20me%20gustar%C3%ADa%20adquirir%20un%20lote%20de%20glucometros%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n"
+                  : "https://wa.me/5491100000000?text=Hola!%20Quiero%20info%20sobre%20VQPET%20Gluc%C3%B3metro"
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-3 bg-white hover:bg-green-50 text-gray-700 hover:text-green-700 font-semibold py-4 px-6 rounded-2xl border border-gray-200 hover:border-green-300 transition-all duration-200"
