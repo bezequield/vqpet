@@ -17,6 +17,21 @@ export const metadata: Metadata = {
     title: "VQPET — El futuro del cuidado diabético de tu perro",
     description: "Monitoreo de glucosa en 5 segundos. Calibrado para mascotas. No para humanos.",
     type: "website",
+    url: "https://vqpet.vercel.app",
+    images: [
+      {
+        url: "https://vqpet.vercel.app/profesional-con-glucometro.png",
+        width: 1200,
+        height: 630,
+        alt: "Profesional veterinaria usando el glucómetro VQPET H",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VQPET — El futuro del cuidado diabético de tu perro",
+    description: "Monitoreo de glucosa en 5 segundos. Calibrado para mascotas. No para humanos.",
+    images: ["https://vqpet.vercel.app/profesional-con-glucometro.png"],
   },
 };
 
